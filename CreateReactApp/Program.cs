@@ -7,6 +7,7 @@ using System.Diagnostics;
 var outputDirectory = GetInput("Enter the output directory", Directory.Exists, "Directory does not exist.");
 var appName = GetInput("Enter the application's name");
 var appDescription = GetInput("Enter the application's description");
+var authorName = GetInput("Enter the author's name");
 
 try
 {
@@ -192,7 +193,7 @@ async Task UpdatePackageJson()
 
     const string indexPath = "src/index.html";
 
-    package.Author = "Bixler Interactive, LLC";
+    package.Author = authorName;
     package.Name = appName;
     package.Description = appDescription;
     package.Version = "0.0.1";
